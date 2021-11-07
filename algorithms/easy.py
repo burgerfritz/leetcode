@@ -109,3 +109,13 @@ class Solution:
                     return "".join(output)
 
             i += 1
+
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        strs = sorted(strs)
+        current = strs[0]
+        for x in range(1, len(strs)):
+            while strs[x].startswith(current) is not True:
+                current = current[:-1]
+                if len(current) == 0:
+                    break
+        return current
