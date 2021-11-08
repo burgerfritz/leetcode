@@ -1,8 +1,7 @@
-from algorithms.easy import Solution
+
+def isPalindrome(x: int) -> bool:
+    return list(str(x)) == list(str(x))[::-1]
 
 
 if __name__ == '__main__':
-    s = Solution()
-    # print(s.romanToInt("MDCCCLXXXIV"))
-    print(s.longestCommonPrefix(["ab", "a"]))
-    # print(s.longestCommonPrefix(["flower", "flour", "flight"]))
+    print(isPalindrome(123432))
